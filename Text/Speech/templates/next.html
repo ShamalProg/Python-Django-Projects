@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+    <style>
+       #submit-btn{
+        padding:8px;
+        border:2px solid black;
+        background:red;
+        font-weight:700;
+        border-radius:5px;
+        color:#42a54e;
+        text-transform:uppercase;
+       }
+       h1{
+          font-family:"Londrina Sketch", sans-serif;
+          color:black;
+       }
+       h2{
+        font-family:"Edu AU VIC WA NT Dots", cursive;
+        color:#9242a5 ;
+        font-size:30px;
+        font-weight:800;
+        text-transform:uppercase;
+       }
+       #submit-btn:active{
+        background-color:#15e942;
+        color: #f17423 ;
+       }
+       #name{
+        height:30px;
+        width:300px;
+        border:2px solid black;
+        border-radius:5px;
+       }
+
+    </style>
+</head>
+<body style="background-size:cover" background="https://encrypted-tbn0.gstatic.com
+/images?q=tbn:ANd9GcQnZXSgTe10SOSYc90NhMT-55woDUgg4bTJiQ&s" >
+    <center>
+        <h1 style="font-size:90px">Text To Speech Converter</h1>
+        <br>
+        <br>
+        <br>
+        <form method="POST">
+            {% csrf_token%}
+        <h2> Enter Text To Convert Into Voice </h2>
+        <input type="text" id="name" name="name" placeholder="Enter Your Text Here......">
+        <i class="ri-user-voice-fill"></i>
+        <br>
+        <br>
+        <input type="submit"  id="submit-btn"value="Convert">
+        </form>
+    </center>
+</body>
+</html>
